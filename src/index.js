@@ -21,7 +21,9 @@ app.use("/recipes",recipesRouter)
 mongoose.connect("mongodb+srv://harsh:har04tiw@cluster0.r4zuffh.mongodb.net/Cluster0?retryWrites=true&w=majority&appName=Cluster0");
 
 //connecting to the database
-app.listen(3001,()=>{
-    console.log("Server is running on port 3001");
+const PORT = process.env.PORT || 3001;
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
 });
+
 
